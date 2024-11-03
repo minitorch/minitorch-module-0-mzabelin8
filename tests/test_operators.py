@@ -156,7 +156,7 @@ def test_distribute() -> None:
 
 
 @pytest.mark.task0_2
-def test_other(a: float, b: float) -> None:
+def test_other() -> None:
     """Write a test that ensures some other property holds for your functions."""
     # TODO: Implement for Task 0.2.
     a = np.random.randint(1, 10, 1)[0]
