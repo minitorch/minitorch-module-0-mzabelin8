@@ -6,3 +6,9 @@
 * Docs: https://minitorch.github.io/
 
 * Overview: https://minitorch.github.io/module0/module0/
+
+### Dataset Visualization
+
+Here’s a visualization of the dataset:
+
+![Dataset Visualization](images/img1.jpg)
