@@ -31,27 +31,6 @@ from .strategies import assert_close, small_floats
 
 # ## Task 0.1 Basic hypothesis tests.
 
-@pytest.fixture
-def a() -> float:
-    return np.random.randint(1, 10, 1)[0]
-
-
-@pytest.fixture
-def b() -> float:
-    return np.random.randint(1, 10, 1)[0]
-
-@pytest.fixture
-def x() -> float:
-    return np.random.randint(1, 10, 1)[0]
-
-@pytest.fixture
-def y() -> float:
-    return np.random.randint(1, 10, 1)[0]
-
-@pytest.fixture
-def z() -> float:
-    return np.random.randint(1, 10, 1)[0]
-
 
 
 
@@ -153,21 +132,26 @@ def test_transitive(a: float, b: float, c: float) -> None:
 
 
 @pytest.mark.task0_2
-def test_symmetric(a: float, b: float) -> None:
+def test_symmetric() -> None:
     """Write a test that ensures that :func:`minitorch.operators.mul` is symmetric, i.e.
     gives the same value regardless of the order of its input.
     """
     # TODO: Implement for Task 0.2.
+    a = np.random.randint(1, 10, 1)[0]
+    b = np.random.randint(1, 10, 1)[0]
     assert_close(mul(a, b), mul(b, a))
 
 
 
 @pytest.mark.task0_2
-def test_distribute(x: float, y: float, z: float) -> None:
+def test_distribute() -> None:
     r"""Write a test that ensures that your operators distribute, i.e.
     :math:`z \times (x + y) = z \times x + z \times y`
     """
     # TODO: Implement for Task 0.2.
+    x = np.random.randint(1, 10, 1)[0]
+    y = np.random.randint(1, 10, 1)[0]
+    z = np.random.randint(1, 10, 1)[0]
     assert_close(mul(z, x + y), mul(z, x) + mul(z, y))
 
 
@@ -175,6 +159,8 @@ def test_distribute(x: float, y: float, z: float) -> None:
 def test_other(a: float, b: float) -> None:
     """Write a test that ensures some other property holds for your functions."""
     # TODO: Implement for Task 0.2.
+    a = np.random.randint(1, 10, 1)[0]
+    b = np.random.randint(1, 10, 1)[0]
     assert_close(add(a, b), add(b, a))
     assert_close(mul(a, 1), a)
 
