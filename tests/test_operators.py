@@ -3,6 +3,8 @@ from typing import Callable, List, Tuple
 import pytest
 from hypothesis import given
 from hypothesis.strategies import lists
+import numpy as np
+
 
 from minitorch import MathTest
 import minitorch
@@ -28,6 +30,30 @@ from minitorch.operators import (
 from .strategies import assert_close, small_floats
 
 # ## Task 0.1 Basic hypothesis tests.
+
+@pytest.fixture
+def a() -> float:
+    return np.random.randint(1, 10, 1)[0]
+
+
+@pytest.fixture
+def b() -> float:
+    return np.random.randint(1, 10, 1)[0]
+
+@pytest.fixture
+def x() -> float:
+    return np.random.randint(1, 10, 1)[0]
+
+@pytest.fixture
+def y() -> float:
+    return np.random.randint(1, 10, 1)[0]
+
+@pytest.fixture
+def z() -> float:
+    return np.random.randint(1, 10, 1)[0]
+
+
+
 
 
 @pytest.mark.task0_1
